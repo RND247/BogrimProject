@@ -9,7 +9,7 @@
     "Date_Of_Birth": "1/1/1978",
     "Current_Work_Place": "Google",
     "Job_Title": "CEO",
-    "Work_Area": "Management",
+    "Work_Field": "Management",
     "Notes": null
     },
     {
@@ -21,7 +21,7 @@
     "Date_Of_Birth": "2/2/1990",
     "Current_Work_Place": "Tel-Aviv University",
     "Job_Title": "B.A Student",
-    "Work_Area": "Physics",
+    "Work_Field": "Physics",
     "Notes": null
     },
     {
@@ -33,7 +33,7 @@
     "Date_Of_Birth": "2/2/1990",
     "Current_Work_Place": "Tel-Aviv University",
     "Job_Title": "M.A Student",
-    "Work_Area": "Physics",
+    "Work_Field": "Physics",
     "Notes": null
     },
     {
@@ -45,7 +45,7 @@
     "Date_Of_Birth": "2/2/1990",
     "Current_Work_Place": "NASA Israel",
     "Job_Title": "Technical Lead",
-    "Work_Area": "Rockets and Physics",
+    "Work_Field": "Rockets and Physics",
     "Notes": null
     },
     {
@@ -57,7 +57,7 @@
     "Date_Of_Birth": "3/3/1993",
     "Current_Work_Place": "IBM Israel",
     "Job_Title": "Technical Lead",
-    "Work_Area": "Cheap Design",
+    "Work_Field": "Cheap Design",
     "Notes": null
     }
   ]

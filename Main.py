@@ -1,4 +1,5 @@
 import json
+from graduate import Graduate
 
 with open("DB.json") as f:
     data = json.load(f)
@@ -34,11 +35,13 @@ def _getIDsByKey(dict, key):
 def search(dict, key):
     result_graduates = list()
     result_DB_IDs = _getIDsByKey(dict, key)
-    for boger in dict:
-        if boger["DB_ID"] in result_DB_IDs:
-            result_graduates.append(boger)
+    for graduate in dict:
+        if graduate["DB_ID"] in result_DB_IDs:
+            result_graduates.append(graduate)
     return result_graduates
 
 
-for result in search(graduates_dict, "Al"):
-    print result
+graduates_list = list()
+for result in search(graduates_dict, "a"):
+    graduates_list.append(Graduate(result))
+    print Graduate(result)
