@@ -8,41 +8,56 @@ graduates_dict = data["Graduates"]
 
 # Search Functions
 
-def _getIDsByFName(dict, fname):
+def __getIDsByFName(dict, fname):
     # type: (dict, str) -> list
     result_DB_IDs = list()
     for graduate in dict:
-        if fname in graduate["First_Name"]:
+        if fname.lower() in graduate["First_Name"].lower():
             result_DB_IDs.append(graduate["DB_ID"])
     return result_DB_IDs
 
 
-def _getIDsByLName(dict, lname):
+def __getIDsByLName(dict, lname):
     # type: (dict, str) -> list
     result_DB_IDs = list()
     for graduate in dict:
-        if lname in graduate["Last_Name"]:
+        if lname.lower() in graduate["Last_Name"].lower():
             result_DB_IDs.append(graduate["DB_ID"])
     return result_DB_IDs
 
 
-def _getIDsByKey(dict, key):
+def __getIDsByKey(dict, key):
     # type: (dict, str) -> list
-    result_DB_IDs = _getIDsByFName(dict, key)
-    result_DB_IDs.extend(id for id in _getIDsByLName(dict, key) if id not in result_DB_IDs)
+    result_DB_IDs = __getIDsByFName(dict, key)
+    result_DB_IDs.extend(id for id in __getIDsByLName(dict, key) if id not in result_DB_IDs)
     return result_DB_IDs
 
-def search(dict, key):
-    # type: (dict, str) -> list
+
+def __isLastEntry(graduates_list, graduateEntry):
+    for graduate in graduates_list:
+        if graduate.Last_DB_ID == graduateEntry.DB_ID:
+            return False
+    return True
+
+
+def __filterDuplicateEntries(graduates_list):
     result_graduates = list()
-    result_DB_IDs = _getIDsByKey(dict, key)
-    for graduate in dict:
-        if graduate["DB_ID"] in result_DB_IDs:
+    for graduate in graduates_list:
+        if __isLastEntry(graduates_list, graduate):
             result_graduates.append(graduate)
     return result_graduates
 
 
-graduates_list = list()
-for result in search(graduates_dict, "a"):
-    graduates_list.append(Graduate(result))
-    print Graduate(result)
+def search(dict, key):
+    # type: (dict, str) -> list
+    result_graduates = list()
+    result_DB_IDs = __getIDsByKey(dict, key)
+    for graduate in dict:
+        if graduate["DB_ID"] in result_DB_IDs:
+            result_graduates.append(Graduate(graduate))
+    return __filterDuplicateEntries(result_graduates)
+
+
+graduates_list = search(graduates_dict, "a")
+for result in graduates_list:
+    print result
