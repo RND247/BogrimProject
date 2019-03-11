@@ -6,3 +6,9 @@ class Workplace:
 
     def __str__(self):
         return self.name
+
+    def toDict(self):
+        workplace_dict = dict()
+        workplace_dict["Name"] = self.name
+        workplace_dict["Location"] = self.location
+        return workplace_dict
