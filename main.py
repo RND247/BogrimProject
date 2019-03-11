@@ -1,5 +1,6 @@
 import json
 from graduate import Graduate
+from workplace import Workplace
 
 with open("DB.json") as f:
     data = json.load(f)
@@ -25,11 +26,15 @@ def __filterDuplicateEntriesDict(graduates_dict):
 
 
 DB_graduates_dict = data["Graduates"]
+DB_workplaces_dict = data["Workplaces"]
 full_graduates_dict = dict()  # Graduates Dictionary with all the graduates' entries from the DB.
 for val in DB_graduates_dict:
     full_graduates_dict[val["DB_ID"]] = Graduate(val)
 no_dup_graduates_dict = __filterDuplicateEntriesDict(full_graduates_dict)  # Graduates Dictionary with only the last
                                                                             # entry for each graduate.
+full_workplaces_dict = dict()  # Workplaces Dictionary with all the workplaces' entries from the DB.
+for val in DB_workplaces_dict:
+    full_workplaces_dict[val["Name"]] = Workplace(val)
 
 
 def __getIDsByKey(dict, key):
@@ -52,19 +57,20 @@ def search(graduates_dict, key):
 
 
 def getEveryEntry(graduate):
-    allEntriesList = list()
+    all_entries_list = list()
     while graduate.Last_DB_ID is not None:
-        allEntriesList.append(graduate)
+        all_entries_list.append(graduate)
         graduate = full_graduates_dict[graduate.Last_DB_ID]
-    allEntriesList.append(graduate)
-    return allEntriesList
+    all_entries_list.append(graduate)
+    return all_entries_list
+
 
 # test runs /*
-graduates_list = search(no_dup_graduates_dict, "n")
+graduates_list = search(no_dup_graduates_dict, "al")
 for result in graduates_list:
     print str(result)
 print "\n"
-gr = full_graduates_dict[3]
+gr = no_dup_graduates_dict[3]
 for entry in getEveryEntry(gr):
     print entry.Job_Title + " at " + entry.Current_Work_Place
 
