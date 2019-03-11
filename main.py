@@ -6,7 +6,8 @@ with open("DB.json") as f:
 
 graduates_dict = data["Graduates"]
 
-# Search Functions
+# Search Functions /
+
 
 def __getIDsByFName(dict, fname):
     # type: (dict, str) -> list
@@ -57,7 +58,11 @@ def search(dict, key):
             result_graduates.append(Graduate(graduate))
     return __filterDuplicateEntries(result_graduates)
 
+# /
 
-graduates_list = search(graduates_dict, "a")
+# test runs /
+graduates_list = search(graduates_dict, "al")
 for result in graduates_list:
     print result
+
+# /
