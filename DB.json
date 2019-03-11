@@ -60,5 +60,23 @@
     "Work_Field": "Cheap Design",
     "Notes": null
     }
+  ],
+  "Workplaces": [
+    {
+      "Name": "Google",
+      "Location": "Igal Alon St. 98, Tel Aviv-Yafo"
+    },
+    {
+      "Name": "Tel Aviv University",
+      "Location": "Tel Aviv-Yafo"
+    },
+    {
+      "Name": "NASA Israel",
+      "Location": "Ha'Ofek St. 13, Hertzeliya"
+    },
+    {
+      "Name": "IBM Israel",
+      "Location": "Em Hamoshavot Rd. 94, Petah Tikva"
+    }
   ]
 }
