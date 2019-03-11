@@ -10,7 +10,7 @@ graduates_dict = data["Graduates"]
 
 def _getIDsByFName(dict, fname):
     # type: (dict, str) -> list
-    result_DB_IDs = []
+    result_DB_IDs = list()
     for graduate in dict:
         if fname in graduate["First_Name"]:
             result_DB_IDs.append(graduate["DB_ID"])
@@ -19,7 +19,7 @@ def _getIDsByFName(dict, fname):
 
 def _getIDsByLName(dict, lname):
     # type: (dict, str) -> list
-    result_DB_IDs = []
+    result_DB_IDs = list()
     for graduate in dict:
         if lname in graduate["Last_Name"]:
             result_DB_IDs.append(graduate["DB_ID"])
@@ -33,6 +33,7 @@ def _getIDsByKey(dict, key):
     return result_DB_IDs
 
 def search(dict, key):
+    # type: (dict, str) -> list
     result_graduates = list()
     result_DB_IDs = _getIDsByKey(dict, key)
     for graduate in dict:
