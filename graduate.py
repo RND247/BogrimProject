@@ -1,5 +1,4 @@
-import time
-
+from datetime import date
 
 class Graduate:
 
@@ -16,8 +15,17 @@ class Graduate:
         self.Notes = graduate_info_list["Notes"]
 
     def __str__(self):
-        return self.First_Name + " " + self.Last_Name
+        return self.First_Name + " " + self.Last_Name + " " + str(self.calculateAge())
+
+    def __dateOfBirthToDateTime(self):
+        dateOfBirth_int = list()
+        dateOfBirth_str = self.Date_Of_Birth.split("/")
+        for val in dateOfBirth_str:
+            dateOfBirth_int.append(int(val))
+        return date(dateOfBirth_int[2], dateOfBirth_int[1],dateOfBirth_int[0])
 
     def calculateAge(self):
-        time.gmtime()
-        pass
+        today = date.today()
+        dateOfBirth = self.__dateOfBirthToDateTime()
+        age = today.year - dateOfBirth.year - ((today.month, today.day) < (dateOfBirth.month, dateOfBirth.day))
+        return age
