@@ -83,7 +83,7 @@ def __buildJsonDict():
     newJsonDict["Graduates"] = graduates_dicts_list
     newJsonDict["Workplaces"] = workplaces_dicts_list
     with open("DB.json", "w") as f:
-        json.dump(newJsonDict, f, indent=3)
+        json.dump(newJsonDict, f, indent=2)
         f.close()
 
 
@@ -121,8 +121,8 @@ graduates_list = searchGraduateByName("al")
 for result in graduates_list:
     print str(result)
 print "\n"
-gr = no_dup_graduates_dict[3]
+gr = no_dup_graduates_dict[9]
 for entry in getEveryEntry(gr):
     print entry.Job_Title + " at " + entry.Current_Work_Place
-#addNewGraduate(("424242244","Alex","Shimoni","11/7/1991","IBM Israel","Junior Programmer", "OS", ""))
+#addNewGraduate(("429456244","Ran","Dayan","24/7/1994","Google","CEO", "Management", ""))
 # */

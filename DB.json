@@ -1,94 +1,151 @@
 {
-   "Workplaces": [
-      {
-         "Name": "Tel Aviv University", 
-         "Location": "Tel Aviv-Yafo"
-      }, 
-      {
-         "Name": "Google", 
-         "Location": "Igal Alon St. 98, Tel Aviv-Yafo"
-      }, 
-      {
-         "Name": "IBM Israel", 
-         "Location": "Em Hamoshavot Rd. 94, Petah Tikva"
-      }, 
-      {
-         "Name": "NASA Israel", 
-         "Location": "Ha'Ofek St. 13, Hertzeliya"
-      }
-   ], 
-   "Graduates": [
-      {
-         "Last_DB_ID": null, 
-         "First_Name": "Alon", 
-         "DB_ID": 0, 
-         "Date_Of_Birth": "1/1/1978", 
-         "Current_Work_Place": "Google", 
-         "ID_Number": "123456789", 
-         "Notes": null, 
-         "Last_Name": "Arduf", 
-         "Work_Field": "Management", 
-         "Job_Title": "CEO"
-      }, 
-      {
-         "Last_DB_ID": null, 
-         "First_Name": "Benny", 
-         "DB_ID": 1, 
-         "Date_Of_Birth": "2/2/1990", 
-         "Current_Work_Place": "Tel-Aviv University", 
-         "ID_Number": "234567890", 
-         "Notes": null, 
-         "Last_Name": "Buganim", 
-         "Work_Field": "Physics", 
-         "Job_Title": "B.A Student"
-      }, 
-      {
-         "Last_DB_ID": 1, 
-         "First_Name": "Benny", 
-         "DB_ID": 2, 
-         "Date_Of_Birth": "2/2/1990", 
-         "Current_Work_Place": "Tel-Aviv University", 
-         "ID_Number": "234567890", 
-         "Notes": null, 
-         "Last_Name": "Buganim", 
-         "Work_Field": "Physics", 
-         "Job_Title": "M.A Student"
-      }, 
-      {
-         "Last_DB_ID": 2, 
-         "First_Name": "Benny", 
-         "DB_ID": 3, 
-         "Date_Of_Birth": "2/2/1990", 
-         "Current_Work_Place": "NASA Israel", 
-         "ID_Number": "234567890", 
-         "Notes": null, 
-         "Last_Name": "Buganim", 
-         "Work_Field": "Rockets and Physics", 
-         "Job_Title": "Technical Lead"
-      }, 
-      {
-         "Last_DB_ID": null, 
-         "First_Name": "Roey", 
-         "DB_ID": 4, 
-         "Date_Of_Birth": "3/3/1993", 
-         "Current_Work_Place": "IBM Israel", 
-         "ID_Number": "234567890", 
-         "Notes": null, 
-         "Last_Name": "Alon", 
-         "Work_Field": "Cheap Design", 
-         "Job_Title": "Technical Lead"
-      }, 
-      {
-         "Last_DB_ID": null, 
-         "First_Name": "Alex", 
-         "DB_ID": 5, 
-         "Date_Of_Birth": "11/7/1991", 
-         "Current_Work_Place": "IBM Israel", 
-         "ID_Number": "424242244", 
-         "Notes": "", 
-         "Last_Name": "Shimoni", 
-         "Work_Field": "OS", 
-         "Job_Title": "Junior Programmer"
-      }
-   ]
+  "Workplaces": [
+    {
+      "Image": null, 
+      "Name": "IBM Israel", 
+      "Location": "Em Hamoshavot Rd. 94, Petah Tikva"
+    }, 
+    {
+      "Image": "google.jpeg", 
+      "Name": "Google", 
+      "Location": "Igal Alon St. 98, Tel Aviv-Yafo"
+    }, 
+    {
+      "Image": "tau.png", 
+      "Name": "Tel-Aviv University",
+      "Location": "Tel Aviv-Yafo"
+    }, 
+    {
+      "Image": "matzov.jpg", 
+      "Name": "Matzov", 
+      "Location": "Tzrifin, Rishon Le'Zion"
+    }, 
+    {
+      "Image": null, 
+      "Name": "NASA Israel", 
+      "Location": "Ha'Ofek St. 13, Hertzeliya"
+    }
+  ], 
+  "Graduates": [
+    {
+      "Last_DB_ID": null, 
+      "First_Name": "Alon", 
+      "DB_ID": 0, 
+      "Date_Of_Birth": "1/1/1978", 
+      "Current_Work_Place": "NASA Israel",
+      "ID_Number": "123456789", 
+      "Notes": null, 
+      "Last_Name": "Arduf", 
+      "Work_Field": "Management", 
+      "Job_Title": "CEO"
+    }, 
+    {
+      "Last_DB_ID": null, 
+      "First_Name": "Benny", 
+      "DB_ID": 1, 
+      "Date_Of_Birth": "2/2/1990", 
+      "Current_Work_Place": "Tel-Aviv University", 
+      "ID_Number": "234567890", 
+      "Notes": null, 
+      "Last_Name": "Buganim", 
+      "Work_Field": "Physics", 
+      "Job_Title": "B.A Student"
+    }, 
+    {
+      "Last_DB_ID": 1, 
+      "First_Name": "Benny", 
+      "DB_ID": 2, 
+      "Date_Of_Birth": "2/2/1990", 
+      "Current_Work_Place": "Tel-Aviv University", 
+      "ID_Number": "234567890", 
+      "Notes": null, 
+      "Last_Name": "Buganim", 
+      "Work_Field": "Physics", 
+      "Job_Title": "M.A Student"
+    }, 
+    {
+      "Last_DB_ID": 2, 
+      "First_Name": "Benny", 
+      "DB_ID": 3, 
+      "Date_Of_Birth": "2/2/1990", 
+      "Current_Work_Place": "NASA Israel", 
+      "ID_Number": "234567890", 
+      "Notes": null, 
+      "Last_Name": "Buganim", 
+      "Work_Field": "Rockets and Physics", 
+      "Job_Title": "Technical Lead"
+    }, 
+    {
+      "Last_DB_ID": null, 
+      "First_Name": "Roey", 
+      "DB_ID": 4, 
+      "Date_Of_Birth": "3/3/1993", 
+      "Current_Work_Place": "IBM Israel", 
+      "ID_Number": "234567890", 
+      "Notes": null, 
+      "Last_Name": "Alon", 
+      "Work_Field": "Cheap Design", 
+      "Job_Title": "Technical Lead"
+    }, 
+    {
+      "Last_DB_ID": null, 
+      "First_Name": "Alex", 
+      "DB_ID": 5, 
+      "Date_Of_Birth": "11/7/1991", 
+      "Current_Work_Place": "IBM Israel", 
+      "ID_Number": "424242244", 
+      "Notes": "", 
+      "Last_Name": "Shimoni", 
+      "Work_Field": "OS", 
+      "Job_Title": "Junior Programmer"
+    }, 
+    {
+      "Last_DB_ID": null, 
+      "First_Name": "Ran", 
+      "DB_ID": 6, 
+      "Date_Of_Birth": "24/7/1994", 
+      "Current_Work_Place": "Matzov",
+      "ID_Number": "429456244", 
+      "Notes": "", 
+      "Last_Name": "Dayan", 
+      "Work_Field": "Network Equipment",
+      "Job_Title": "System Validation Engineer"
+    },
+    {
+      "Last_DB_ID": 6,
+      "First_Name": "Ran",
+      "DB_ID": 7,
+      "Date_Of_Birth": "24/7/1994",
+      "Current_Work_Place": "Google",
+      "ID_Number": "429456244",
+      "Notes": "",
+      "Last_Name": "Dayan",
+      "Work_Field": "Management",
+      "Job_Title": "CEO"
+    },
+    {
+      "Last_DB_ID": null,
+      "First_Name": "Lior",
+      "DB_ID": 8,
+      "Date_Of_Birth": "25/3/1994",
+      "Current_Work_Place": "Matzov",
+      "ID_Number": "419256244",
+      "Notes": "",
+      "Last_Name": "Schermann",
+      "Work_Field": "Network Equipment",
+      "Job_Title": "Verification Architect"
+    },
+    {
+      "Last_DB_ID": 8,
+      "First_Name": "Lior",
+      "DB_ID": 9,
+      "Date_Of_Birth": "25/3/1994",
+      "Current_Work_Place": "Tel-Aviv University",
+      "ID_Number": "419256244",
+      "Notes": "",
+      "Last_Name": "Schermann",
+      "Work_Field": "Computer Science and Physics",
+      "Job_Title": "Student"
+    }
+  ]
 }
