@@ -108,7 +108,8 @@ def __getNextID():
 def addNewGraduate((ID_Number, First_Name, Last_Name, Date_Of_Birth, Current_Work_Place, Job_Title, Work_Field, Notes)):
     if __searchGraduateByIDNumber(ID_Number) is None:
         graduate_info_dict = dict()
-        graduate_info_dict["DB_ID"] = __getNextID()
+        next_id = __getNextID()
+        graduate_info_dict["DB_ID"] = next_id
         graduate_info_dict["Last_DB_ID"] = None
         graduate_info_dict["ID_Number"] = ID_Number
         graduate_info_dict["First_Name"] = First_Name
@@ -118,14 +119,14 @@ def addNewGraduate((ID_Number, First_Name, Last_Name, Date_Of_Birth, Current_Wor
         graduate_info_dict["Job_Title"] = Job_Title
         graduate_info_dict["Work_Field"] = Work_Field
         graduate_info_dict["Notes"] = Notes
-        full_graduates_dict[__getNextID()] = Graduate(graduate_info_dict)
+        full_graduates_dict[next_id] = Graduate(graduate_info_dict)
         __buildJsonDict()
     else:
         return False
 
 
 # test runs /*
-graduates_list = searchGraduateByWorkPlace("matzov")
+graduates_list = searchGraduateByWorkPlace("Matzov")
 for result in graduates_list:
     print str(result) + " " + str(__isLastEntry(result))
 print "\n"
