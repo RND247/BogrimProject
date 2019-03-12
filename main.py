@@ -7,20 +7,20 @@ with open("DB.json") as f:
 
 
 # Checks if the given entry is the last (most recent) entry for the graduate in the DB.
-def __isLastEntry(graduates_dict, graduateEntry):
+def __isLastEntry(graduateEntry):
     # types: (dict, Graduate) -> bool
-    for id, graduate in graduates_dict.iteritems():
+    for id, graduate in full_graduates_dict.iteritems():
         if graduate.Last_DB_ID == graduateEntry.DB_ID:
             return False
     return True
 
 
 # Takes a dictionary of graduates and filter it so every graduate will appear only once with its last entry.
-def __filterDuplicateEntriesDict(graduates_dict):
+def __filterDuplicateEntriesDict():
     # types: (dict) -> dict
     result_graduates_dict = dict()
-    for id, graduate in graduates_dict.iteritems():
-        if __isLastEntry(graduates_dict, graduate):
+    for id, graduate in full_graduates_dict.iteritems():
+        if __isLastEntry(graduate):
             result_graduates_dict[id] = graduate
     return result_graduates_dict
 
@@ -30,7 +30,7 @@ DB_workplaces_dict = data["Workplaces"]
 full_graduates_dict = dict()  # Graduates Dictionary with all the graduates' entries from the DB.
 for val in DB_graduates_dict:
     full_graduates_dict[val["DB_ID"]] = Graduate(val)
-no_dup_graduates_dict = __filterDuplicateEntriesDict(full_graduates_dict)  # Graduates Dictionary with only the last
+no_dup_graduates_dict = __filterDuplicateEntriesDict()  # Graduates Dictionary with only the last
                                                                             # entry for each graduate.
 full_workplaces_dict = dict()  # Workplaces Dictionary with all the workplaces' entries from the DB.
 for val in DB_workplaces_dict:
@@ -52,6 +52,14 @@ def searchGraduateByName(key):
     result_DB_IDs = __getIDsByKey(no_dup_graduates_dict, key)
     for id, graduate in no_dup_graduates_dict.iteritems():
         if graduate.DB_ID in result_DB_IDs:
+            result_graduates.append(graduate)
+    return result_graduates
+
+
+def searchGraduateByWorkPlace(workplace):
+    result_graduates = list()
+    for id, graduate in full_graduates_dict.iteritems():
+        if graduate.Current_Work_Place.lower() == workplace.lower():
             result_graduates.append(graduate)
     return result_graduates
 
@@ -117,9 +125,9 @@ def addNewGraduate((ID_Number, First_Name, Last_Name, Date_Of_Birth, Current_Wor
 
 
 # test runs /*
-graduates_list = searchGraduateByName("al")
+graduates_list = searchGraduateByWorkPlace("matzov")
 for result in graduates_list:
-    print str(result)
+    print str(result) + " " + str(__isLastEntry(result))
 print "\n"
 gr = no_dup_graduates_dict[9]
 for entry in getEveryEntry(gr):
