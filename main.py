@@ -1,4 +1,6 @@
 import json
+import time
+import datetime
 from graduate import Graduate
 from workplace import Workplace
 
@@ -140,6 +142,9 @@ def addNewGraduate((id_number, first_name, last_name, date_of_birth, current_wor
     if __searchGraduateByIDNumber(id_number) is None:
         graduate_info_dict = dict()
         next_id = __getNextID()
+        time_stamp_sec = time.time()
+        time_stamp = datetime.datetime.fromtimestamp(time_stamp_sec).strftime("%Y-%m-%d %H:%M:%S")
+        graduate_info_dict["Time_Stamp"] = time_stamp
         graduate_info_dict["DB_ID"] = next_id
         graduate_info_dict["Last_DB_ID"] = None
         graduate_info_dict["ID_Number"] = id_number
@@ -164,5 +169,5 @@ print "\n"
 gr = no_dup_graduates_dict[9]
 for entry in getEveryEntry(gr):
     print entry.job_title + " at " + entry.current_work_place
-#addNewGraduate(("205786122","TRan","Dayan","24/7/1994","Google","CEO", "Management", ""))
+addNewGraduate(("205786122","TRan","Dayan","24/7/1994","Google","CEO", "Management", ""))
 # */

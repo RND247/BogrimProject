@@ -4,6 +4,7 @@ from datetime import date
 class Graduate:
 
     def __init__(self, graduate_info_dict):
+        self.time_stamp = graduate_info_dict["Time_Stamp"]
         self.db_id = graduate_info_dict["DB_ID"]
         self.last_db_id = graduate_info_dict["Last_DB_ID"]
         self.id_number = graduate_info_dict["ID_Number"]
@@ -21,6 +22,7 @@ class Graduate:
     # Takes all the graduate's attributes and return it in a form of dict.
     def toDict(self):
         graduate_dict = dict()
+        graduate_dict["Time_Stamp"] = self.time_stamp
         graduate_dict["DB_ID"] = self.db_id
         graduate_dict["Last_DB_ID"] = self.last_db_id
         graduate_dict["ID_Number"] = self.id_number
