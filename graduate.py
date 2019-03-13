@@ -17,10 +17,13 @@ class Graduate:
         self.notes = graduate_info_dict["Notes"]
 
     def __str__(self):
-        return self.first_name + " " + self.last_name + " " + str(self.calculateAge())
+        return self.first_name + " " + self.last_name + " " + str(self.calculate_age())
 
-    # Takes all the graduate's attributes and return it in a form of dict.
-    def toDict(self):
+    def to_dict(self):
+        """
+        Takes all the graduate's attributes and return it in a form of dict.
+        :return: a dict.
+        """
         graduate_dict = dict()
         graduate_dict["Time_Stamp"] = self.time_stamp
         graduate_dict["DB_ID"] = self.db_id
@@ -35,17 +38,23 @@ class Graduate:
         graduate_dict["Notes"] = self.notes
         return graduate_dict
 
-    # Takes the Date_Of_Birth attribute and transfers and returns it in a form of datetime.
-    def __dateOfBirthToDateTime(self):
+    def __date_of_birth_to_datetime(self):
+        """
+        Takes the Date_Of_Birth attribute and transfers and returns it in a form of datetime.
+        :return: a datetime.
+        """
         date_of_birth_int = list()
         date_of_birth_str = self.date_of_birth.split("/")
         for val in date_of_birth_str:
             date_of_birth_int.append(int(val))
         return date(date_of_birth_int[2], date_of_birth_int[1],date_of_birth_int[0])
 
-    # Calculates and returns the age of the graduate.
-    def calculateAge(self):
+    def calculate_age(self):
+        """
+        Calculates and returns the age of the graduate.
+        :return: an integer, representing the calculated age.
+        """
         today = date.today()
-        date_of_birth = self.__dateOfBirthToDateTime()
+        date_of_birth = self.__date_of_birth_to_datetime()
         age = today.year - date_of_birth.year - ((today.month, today.day) < (date_of_birth.month, date_of_birth.day))
         return age
