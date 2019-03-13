@@ -1,19 +1,14 @@
 {
   "Workplaces": [
     {
-      "Image": null, 
-      "Name": "IBM Israel", 
-      "Location": "Em Hamoshavot Rd. 94, Petah Tikva"
-    }, 
-    {
       "Image": "google.jpeg", 
       "Name": "Google", 
       "Location": "Igal Alon St. 98, Tel Aviv-Yafo"
     }, 
     {
-      "Image": "tau.png", 
-      "Name": "Tel-Aviv University",
-      "Location": "Tel Aviv-Yafo"
+      "Image": null, 
+      "Name": "IBM Israel", 
+      "Location": "Em Hamoshavot Rd. 94, Petah Tikva"
     }, 
     {
       "Image": "matzov.jpg", 
@@ -24,6 +19,11 @@
       "Image": null, 
       "Name": "NASA Israel", 
       "Location": "Ha'Ofek St. 13, Hertzeliya"
+    }, 
+    {
+      "Image": "tau.png", 
+      "Name": "Tel-Aviv University", 
+      "Location": "Tel Aviv-Yafo"
     }
   ], 
   "Graduates": [
@@ -32,7 +32,7 @@
       "First_Name": "Alon", 
       "DB_ID": 0, 
       "Date_Of_Birth": "1/1/1978", 
-      "Current_Work_Place": "NASA Israel",
+      "Current_Work_Place": "NASA Israel", 
       "ID_Number": "123456789", 
       "Notes": null, 
       "Last_Name": "Arduf", 
@@ -104,47 +104,47 @@
       "First_Name": "Ran", 
       "DB_ID": 6, 
       "Date_Of_Birth": "24/7/1994", 
-      "Current_Work_Place": "Matzov",
+      "Current_Work_Place": "Matzov", 
       "ID_Number": "429456244", 
       "Notes": "", 
       "Last_Name": "Dayan", 
-      "Work_Field": "Network Equipment",
+      "Work_Field": "Network Equipment", 
       "Job_Title": "System Validation Engineer"
-    },
+    }, 
     {
-      "Last_DB_ID": 6,
-      "First_Name": "Ran",
-      "DB_ID": 7,
-      "Date_Of_Birth": "24/7/1994",
-      "Current_Work_Place": "Google",
-      "ID_Number": "429456244",
-      "Notes": "",
-      "Last_Name": "Dayan",
-      "Work_Field": "Management",
+      "Last_DB_ID": 6, 
+      "First_Name": "Ran", 
+      "DB_ID": 7, 
+      "Date_Of_Birth": "24/7/1994", 
+      "Current_Work_Place": "Google", 
+      "ID_Number": "429456244", 
+      "Notes": "", 
+      "Last_Name": "Dayan", 
+      "Work_Field": "Management", 
       "Job_Title": "CEO"
-    },
+    }, 
     {
-      "Last_DB_ID": null,
-      "First_Name": "Lior",
-      "DB_ID": 8,
-      "Date_Of_Birth": "25/3/1994",
-      "Current_Work_Place": "Matzov",
-      "ID_Number": "419256244",
-      "Notes": "",
-      "Last_Name": "Schermann",
-      "Work_Field": "Network Equipment",
+      "Last_DB_ID": null, 
+      "First_Name": "Lior", 
+      "DB_ID": 8, 
+      "Date_Of_Birth": "25/3/1994", 
+      "Current_Work_Place": "Matzov", 
+      "ID_Number": "419256244", 
+      "Notes": "", 
+      "Last_Name": "Schermann", 
+      "Work_Field": "Network Equipment", 
       "Job_Title": "Verification Architect"
-    },
+    }, 
     {
-      "Last_DB_ID": 8,
-      "First_Name": "Lior",
-      "DB_ID": 9,
-      "Date_Of_Birth": "25/3/1994",
-      "Current_Work_Place": "Tel-Aviv University",
-      "ID_Number": "419256244",
-      "Notes": "",
-      "Last_Name": "Schermann",
-      "Work_Field": "Computer Science and Physics",
+      "Last_DB_ID": 8, 
+      "First_Name": "Lior", 
+      "DB_ID": 9, 
+      "Date_Of_Birth": "25/3/1994", 
+      "Current_Work_Place": "Tel-Aviv University", 
+      "ID_Number": "419256244", 
+      "Notes": "", 
+      "Last_Name": "Schermann", 
+      "Work_Field": "Computer Science and Physics", 
       "Job_Title": "Student"
     }
   ]

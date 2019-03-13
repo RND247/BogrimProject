@@ -9,6 +9,7 @@ class Workplace:
         return self.name
 
     def toDict(self):
+        # Takes all the workplace's attributes and returns it in a form of dict.
         workplace_dict = dict()
         workplace_dict["Name"] = self.name
         workplace_dict["Location"] = self.location
