@@ -90,7 +90,7 @@ def search_graduate_by_workplace(workplace):
 def __search_graduate_by_id_number(id_number):
     """
     Gets an id_number and returns a value from no_dup_graduates_dict if its id_number attribute is equal to the given
-#   id_number, else it returns None.
+    id_number, else it returns None.
     :param id_number: a string, an id number to look for in the values of no_dup_graduates_dict.
     :return: a Graduate with matching value in its id_number attribute, None if no one found.
     """
@@ -117,7 +117,7 @@ def get_every_entry(graduate):
 def __build_json_dict():
     """
     Builds and returns a dictionary of Graduates and Workplaces based on the full_graduates_dict and the
-#   full_workplaces_dict dicts.
+    full_workplaces_dict dicts.
     :return: a dict with keys of "Graduates" and "Workplaces".
     """
     new_json_dict = dict()
